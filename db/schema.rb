@@ -10,9 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_09_28_180500) do
+ActiveRecord::Schema[7.2].define(version: 2024_09_28_181931) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "dogs", force: :cascade do |t|
+    t.string "name", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_dogs_on_user_id"
+  end
 
   create_table "sessions", force: :cascade do |t|
     t.bigint "user_id", null: false
@@ -36,5 +44,6 @@ ActiveRecord::Schema[7.2].define(version: 2024_09_28_180500) do
     t.index ["role"], name: "index_users_on_role"
   end
 
+  add_foreign_key "dogs", "users"
   add_foreign_key "sessions", "users"
 end
