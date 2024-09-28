@@ -50,6 +50,7 @@ end
 
 group :test do
   gem "capybara", require: false
+  gem "rspec-watcher"
   gem "selenium-webdriver", require: false
   gem "shoulda-matchers"
 end
