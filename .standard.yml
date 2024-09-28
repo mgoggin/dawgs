@@ -1,0 +1,12 @@
+plugins:
+  - standard-rails
+
+extend_config:
+  - .rubocop.ext.yml
+
+Rails:
+  Enabled: true
+
+ignore:
+  - "lib/templates/rspec/system/system_spec.rb":
+    - RSpec/DescribeClass
