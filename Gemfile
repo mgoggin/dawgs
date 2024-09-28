@@ -9,6 +9,10 @@ gem "rails", "~> 7.2.1"
 # Framework Extensions
 gem "bootsnap", require: false
 
+# Auth
+gem "authentication-zero"
+gem "bcrypt", "~> 3.1.7"
+
 # Asset Management
 gem "importmap-rails"
 gem "propshaft"
@@ -29,6 +33,7 @@ group :development, :test do
   gem "brakeman", require: false
   gem "debug", platforms: %i[mri windows], require: "debug/prelude"
   gem "factory_bot_rails"
+  gem "faker"
   gem "rspec-rails"
 end
 

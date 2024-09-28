@@ -77,7 +77,9 @@ GEM
       activerecord (>= 3.2, < 8.0)
       rake (>= 10.4, < 14.0)
     ast (2.4.2)
+    authentication-zero (3.0.2)
     base64 (0.2.0)
+    bcrypt (3.1.20)
     better_html (2.1.1)
       actionview (>= 6.0)
       activesupport (>= 6.0)
@@ -123,6 +125,14 @@ GEM
     factory_bot_rails (6.4.3)
       factory_bot (~> 6.4)
       railties (>= 5.0.0)
+    faker (3.4.2)
+      i18n (>= 1.8.11, < 2)
+    ffi (1.17.0-aarch64-linux-gnu)
+    ffi (1.17.0-arm-linux-gnu)
+    ffi (1.17.0-arm64-darwin)
+    ffi (1.17.0-x86-linux-gnu)
+    ffi (1.17.0-x86_64-darwin)
+    ffi (1.17.0-x86_64-linux-gnu)
     globalid (1.2.1)
       activesupport (>= 6.1)
     good_migrations (0.2.1)
@@ -357,12 +367,15 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  authentication-zero
+  bcrypt (~> 3.1.7)
   bootsnap
   brakeman
   capybara
   debug
   erb_lint
   factory_bot_rails
+  faker
   good_migrations
   importmap-rails
   pg (~> 1.1)
