@@ -25,6 +25,9 @@ Rails.application.configure do
   config.action_controller.perform_caching = false
   config.cache_store = :null_store
 
+  config.action_mailer.perform_deliveries = false
+  config.action_mailer.default_url_options = {host: "localhost", port: 3000}
+
   # Render exception templates for rescuable exceptions and raise for other exceptions.
   config.action_dispatch.show_exceptions = :rescuable
 
