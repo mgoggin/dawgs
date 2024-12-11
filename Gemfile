@@ -4,7 +4,7 @@ source "https://rubygems.org"
 gem "pg", "~> 1.1"
 
 # Framework
-gem "rails", "~> 7.2.1"
+gem "rails", "~> 7.2.2"
 
 # Framework Extensions
 gem "bootsnap", require: false
